@@ -1,8 +1,8 @@
 # Результаты сценариев
 
-Артефакты: `results.json` - статусы и числа сценариев; `tablestats.txt` /
-`tablestats_plain.txt` - `bash ops.sh tablestats`; `repair.txt` - `bash ops.sh repair`;
-`compaction.txt` - `bash ops.sh compact`.
+В `results.json` находятся статусы и числа сценариев. Файлы `tablestats.txt` и
+`tablestats_plain.txt` создаёт команда `bash ops.sh tablestats`. Файл
+`repair.txt` создаёт `bash ops.sh repair`, а `compaction.txt` — `bash ops.sh compact`.
 
 Блоки ниже копируются в README и заполняются числами своего прогона.
 
@@ -12,8 +12,8 @@
 |---|---|---|
 | События пользователя 1001 (`login`, `purchase`, `view`) | 10 000 | |
 
-Время - из вывода `bulk` или `artifacts.bulk.seconds` (секунды); среднее за
-запись = время / 10 000.
+Время можно взять из вывода `bulk` или из `artifacts.bulk.seconds` в секундах.
+Среднее за запись = время / 10 000.
 
 ## `consistency` - ONE и QUORUM
 
@@ -22,7 +22,8 @@
 | ONE | | |
 | QUORUM | | |
 
-Числа - `artifacts.consistency` (секунды); для таблицы перевести в миллисекунды.
+Числа находятся в `artifacts.consistency` в секундах. Для таблицы их нужно
+перевести в миллисекунды.
 
 ## Сжатие - `tablestats`
 
@@ -54,6 +55,6 @@
 
 ## `data` и `repair`
 
-`data` - в README статус и краткий перечень проверенного (`scenarios.data`
-в `results.json`); `repair` - финальные строки `repair.txt` и объяснения
-раздела 7.
+Для `data` в README нужны статус и краткий перечень проверенного
+(`scenarios.data` в `results.json`). Для `repair` нужны финальные строки
+`repair.txt` и объяснения раздела 7.
